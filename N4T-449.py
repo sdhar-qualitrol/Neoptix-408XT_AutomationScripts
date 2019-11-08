@@ -6,7 +6,7 @@
 #   1.1      created for Neoptix(6.53 Firmware Version)                  11/08/2019
 ##############################################################################################
 
-#This test is for Automating N4T-448:
+#This test is for Automating N4T-449:
 #User should be able to verify the sub-field "Substation Name" under Labels and Interfaces option in the Web Page of T/Guard-408XT Device
 
 import Common
