@@ -30,6 +30,14 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 		time.sleep(1)
 		Common.click(browser_driver.find_element_by_xpath("//html/body/div[2]/div[2]/div[4]/div[2]/div/form/div[5]/center/input"))
 		
+		#Check if this is reflected on Status page
+		
+		time.sleep(1)
+		browser_driver.get(Common.Status_address)
+		time.sleep(0.5)
+		Interfaces = browser_driver.find_element_by_id("si_int_8_intf").get_attribute('innerHTML')
+		Common.verifyEqual("Test_Ethernet.Ethernet.Intefaces?","Intefaces Exists?","100Base-TX",Interfaces,"Names do not exist in this page")
+		
 		#To Select FX under Ethernet
 		
 		time.sleep(0.5)
@@ -40,6 +48,14 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 		time.sleep(1)
 		Common.click(browser_driver.find_element_by_xpath("//html/body/div[2]/div[2]/div[4]/div[2]/div/form/div[5]/center/input"))
 		
+		#Check if this is reflected on Status page
+		
+		time.sleep(1)
+		browser_driver.get(Common.Status_address)
+		time.sleep(0.5)
+		Interfaces = browser_driver.find_element_by_id("si_int_8_intf").get_attribute('innerHTML')
+		Common.verifyEqual("Test_Ethernet.Ethernet.Intefaces?","Intefaces Exists?","100Base-FX",Interfaces,"Names do not exist in this page")
+		
 		#To Select TXFX under Ethernet
 		
 		time.sleep(0.5)
@@ -49,6 +65,14 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 		
 		time.sleep(1)
 		Common.click(browser_driver.find_element_by_xpath("//html/body/div[2]/div[2]/div[4]/div[2]/div/form/div[5]/center/input"))
+		
+		#Check if this is reflected on Status page
+		
+		time.sleep(1)
+		browser_driver.get(Common.Status_address)
+		time.sleep(0.5)
+		Interfaces = browser_driver.find_element_by_id("si_int_8_intf").get_attribute('innerHTML')
+		Common.verifyEqual("Test_Ethernet.Ethernet.Intefaces?","Intefaces Exists?","100Base-TX-FX (Dual)",Interfaces,"Names do not exist in this page")
 		
 		time.sleep(1)
 		browser_driver.quit()
