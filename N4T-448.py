@@ -42,12 +42,14 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 		time.sleep(1)
 		browser_driver.get(Common.T_Guard_home_address)
 		time.sleep(0.5)
-		Common.verifyText("Test_Labels.Labels.System_name?","System_name Exists?","Qualitrol T/Guard 408XT Device","Names do not exist in this page")
+		System_Name = browser_driver.find_element_by_id("system-info-1").get_attribute('innerHTML')
+		Common.verifyEqual("Test_Labels.Labels.System_name?","System_name Exists?","Qualitrol T/Guard 408XT Device",System_Name,"Names do not exist in this page")
 		
 		time.sleep(1)
 		browser_driver.get(Common.Status_address)
 		time.sleep(0.5)
-		Common.verifyText("Test_Labels.Labels.System_name?","System_name Exists?","Qualitrol T/Guard 408XT Device","Names do not exist in this page")
+		System_Name = browser_driver.find_element_by_id("si_info_1").get_attribute('innerHTML')
+		Common.verifyEqual("Test_Labels.Labels.System_name?","System_name Exists?","Qualitrol T/Guard 408XT Device",System_Name,"Names do not exist in this page")
 	
 		time.sleep(1)
 		browser_driver.quit()

@@ -42,12 +42,14 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 		time.sleep(1)
 		browser_driver.get(Common.T_Guard_home_address)
 		time.sleep(0.5)
-		Common.verifyText("Test_Labels.Labels.Substation_name?","Substation_name Exists?","IDC Ahmedabad","Names do not exist in this page")
+		Substation_Name = browser_driver.find_element_by_id("system-info-2").get_attribute('innerHTML')
+		Common.verifyEqual("Test_Labels.Labels.Substation_name?","Substation_name Exists?","IDC Ahmedabad",Substation_Name,"Names do not exist in this page")
 		
 		time.sleep(1)
 		browser_driver.get(Common.Status_address)
 		time.sleep(0.5)
-		Common.verifyText("Test_Labels.Labels.Substation_name?","Substation_name Exists?","IDC Ahmedabad","Names do not exist in this page")
+		Substation_Name = browser_driver.find_element_by_id("si_info_2").get_attribute('innerHTML')
+		Common.verifyEqual("Test_Labels.Labels.Substation_name?","Substation_name Exists?","IDC Ahmedabad",Substation_Name,"Names do not exist in this page")
 	
 		time.sleep(1)
 		browser_driver.quit()

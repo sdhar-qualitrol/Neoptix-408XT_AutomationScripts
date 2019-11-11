@@ -25,17 +25,6 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 		time.sleep(0.5)
 		Common.click(browser_driver.find_element_by_id("system_intf_100t"))
 		
-		#To check if DHCP button works and saves it and then return back to static
-		
-		time.sleep(0.5)
-		Common.click(browser_driver.find_element_by_id("system_int_1"))
-		time.sleep(1)
-		Common.click(browser_driver.find_element_by_xpath("//html/body/div[2]/div[2]/div[4]/div[2]/div/form/div[5]/center/input"))
-		
-		time.sleep(0.5)
-		Common.click(browser_driver.find_element_by_id("system_int_1"))
-		
-		
 		#Set up IP Address
 		
 		time.sleep(0.5)
@@ -124,7 +113,7 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 
 		time.sleep(1)
 		IP = browser_driver.find_element_by_id("si_int_2").get_attribute('innerHTML')
-		Common.verifyEqual("Test_Interfaces.Interfaces.IP_Address?","IP_Address?","10.75.58.233 / 255.255.255.0",IP,"IP  Address does not exist in this page")
+		Common.verifyEqual("Test_Interfaces.Interfaces.IP_Address?","IP_Address?","10.75.58.233     / 255.255.255.0",IP,"IP  Address does not exist in this page")
 			
 		time.sleep(1)
 		MAC = browser_driver.find_element_by_id("si_int_5").get_attribute('innerHTML')

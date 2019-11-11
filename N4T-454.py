@@ -25,16 +25,6 @@ if Common.verifyText("Test_Login.Login.Connection Successful?", "Login Page exis
 		time.sleep(0.5)
 		Common.click(browser_driver.find_element_by_id("system_intf_100tfx"))
 		
-		#To check if DHCP button works and saves it and then return back to static
-		
-		time.sleep(0.5)
-		Common.click(browser_driver.find_element_by_id("system_int_1fx"))
-		time.sleep(1)
-		Common.click(browser_driver.find_element_by_xpath("//html/body/div[2]/div[2]/div[4]/div[2]/div/form/div[5]/center/input"))
-		
-		time.sleep(0.5)
-		Common.click(browser_driver.find_element_by_id("system_int_1fx"))
-		
 		#Set up IP Address
 		
 		time.sleep(0.5)
